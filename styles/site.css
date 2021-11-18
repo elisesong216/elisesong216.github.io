@@ -14,7 +14,7 @@ a{
 nav a, nav li{
   color: #ffac3b;
   display: inline;
-  margin: 10px;
+  padding: 10px;
 }
 
 h1{
@@ -34,15 +34,26 @@ h2{
   text-align: center;
 }
 
-div.intro h1{
-  margin: 50px;
-  color: #9294fc;
+img{
+  width: 75%;
+  height: auto;
+  flex-grow: 1;
+  margin: auto;
+  border-radius: 2%;
+  margin-top: 10px;
 }
 
-div.intro img{
-  max-height:30%;
+.intro h1{
+  margin-right: 60px;
+  margin-left: 50px;
+  color: #9294fc;
+  font-size: 50px;
+}
+
+.intro img{
+  max-height: 50%;
   width: 80%;
-  margin-top: 100px;
+  margin-top: 50px;
 }
 
 p{
@@ -73,14 +84,6 @@ nav {
 
 
 
-img{
-  width: 75%;
-  height: auto;
-  flex-grow: 1;
-  margin: auto;
-  border-radius: 2%;
-}
-
 .main{
   display: flex;
   flex-direction: row;
@@ -89,7 +92,7 @@ img{
 .intro{
   display: flex;
   flex-direction: column;
-  width: 70%;
+  width: 75%;
   text-align: center;
 
 }
@@ -97,12 +100,8 @@ img{
 .aside{
   display: flex;
   flex-direction: column;
-  width: 30%;
+  width: 25%;
   text-align: center;
-}
-
-.intro h1{
-  font-size: 50px;
 }
 
 .row{
@@ -134,6 +133,9 @@ figure{
   display: flex;
   flex-direction: row;
   padding: 5%;
+  width: 60%;
+  margin: auto;
+  padding-top: 10px;
 }
 
 .slide{
@@ -142,10 +144,11 @@ figure{
   background-color: #31345d;
   padding: 10px;
   border-radius: 10px;
+  height: 90%;
 }
 
 .slide img{
-  height: 300px;
+  height: 200px;
   width: auto;
 }
 
@@ -172,6 +175,7 @@ figure{
   margin-right: 45%;
   margin-left: 45%;
   margin-top: 1%;
+  width: 100%;
 
 }
 
@@ -186,4 +190,48 @@ figure{
 
 .hover{
   cursor: pointer;
+}
+
+@media (max-width:800px) {
+  .intro{
+    width: 100%;
+  }
+  .intro h1{
+    font-size: 40px;
+    margin-right: 2%;
+    margin-left: 2%;
+    width: 100%;
+    margin-bottom: 5px;
+  }
+  .intro img{
+    margin-top: 0px;
+    width:100%;
+    margin-left: 10px;
+    margin-right: 10px;
+  }
+  .main{
+    display: flex;
+    flex-direction: column;
+    width:100%;
+  }
+  .aside{
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+  }
+
+  .slides .row{
+    display: flex;
+    flex-direction: column;
+  }
+
+  .carousel{
+    width: 90%;
+    margin: auto;
+  }
+
+  .center-col{
+    width: 90%;
+    margin: auto;
+  }
 }

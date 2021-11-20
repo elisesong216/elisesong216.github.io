@@ -2,9 +2,9 @@
 const SLIDES = $(".slide");
 var INDEX = 0;
 const BUTTONS = $(".button");
-console.log(BUTTONS);
 
 function showSlide(index) {
+  INDEX = index;
   let currentSlide = SLIDES.eq(index);
   let currentButton = BUTTONS.eq(index);
 
@@ -13,28 +13,24 @@ function showSlide(index) {
 
   BUTTONS.removeClass("current-slide");
   currentButton.addClass("current-slide");
-
 }
+
 
 ////////////////// click listeners
 $("#left-button").click(function(){
   let NEW = (INDEX - 1) % SLIDES.length;
-  INDEX = NEW;
-  showSlide(INDEX);
+  showSlide(NEW);
 });
 
 $("#right-button").click(function(){
   let NEW = (INDEX + 1) % SLIDES.length;
-  INDEX = NEW;
-  showSlide(INDEX);
+  showSlide(NEW);
 });
 
 $("#button1").click(function(){
-  INDEX = 0;
-  showSlide(INDEX);
+  showSlide(0);
 });
 
 $("#button2").click(function(){
-  INDEX = 1;
-  showSlide(INDEX);
+  showSlide(1);
 });

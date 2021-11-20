@@ -60,7 +60,10 @@ p{
   color: #9294fc;
 }
 
-
+p a{
+  text-decoration: underline;
+  color: #3b3ffc;
+}
 
 nav {
   display: flex;
